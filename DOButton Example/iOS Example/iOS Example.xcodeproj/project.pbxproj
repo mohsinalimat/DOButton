@@ -7,23 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E20168F21D5E559200A27348 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E20168F01D5E559200A27348 /* LaunchScreen.xib */; };
-		E20168F31D5E55A300A27348 /* DOButton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2CB24AF1D5E49C7003D8DE3 /* DOButton.framework */; };
-		E20168F41D5E55A300A27348 /* DOButton.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E2CB24AF1D5E49C7003D8DE3 /* DOButton.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E2CB24921D5E4974003D8DE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CB24911D5E4974003D8DE3 /* AppDelegate.swift */; };
 		E2CB24941D5E4974003D8DE3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CB24931D5E4974003D8DE3 /* ViewController.swift */; };
 		E2CB24971D5E4974003D8DE3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2CB24951D5E4974003D8DE3 /* Main.storyboard */; };
 		E2CB24991D5E4974003D8DE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2CB24981D5E4974003D8DE3 /* Assets.xcassets */; };
+		E2D32FCD1D5E547600AE03F3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2D32FCB1D5E547600AE03F3 /* LaunchScreen.xib */; };
+		E2D32FCE1D5E54FD00AE03F3 /* DOButton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2CB24AF1D5E49C7003D8DE3 /* DOButton.framework */; };
+		E2D32FCF1D5E54FD00AE03F3 /* DOButton.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E2CB24AF1D5E49C7003D8DE3 /* DOButton.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		E20168F51D5E55A300A27348 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E2CB24AA1D5E49C7003D8DE3 /* DOButton.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = E2CB24671D5E48F3003D8DE3;
-			remoteInfo = DOButton;
-		};
 		E2CB24AE1D5E49C7003D8DE3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E2CB24AA1D5E49C7003D8DE3 /* DOButton.xcodeproj */;
@@ -31,16 +24,23 @@
 			remoteGlobalIDString = E2CB24681D5E48F3003D8DE3;
 			remoteInfo = DOButton;
 		};
+		E2D32FD01D5E54FD00AE03F3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E2CB24AA1D5E49C7003D8DE3 /* DOButton.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = E2CB24671D5E48F3003D8DE3;
+			remoteInfo = DOButton;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		E20168F71D5E55A300A27348 /* Embed Frameworks */ = {
+		E2D32FD21D5E54FE00AE03F3 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				E20168F41D5E55A300A27348 /* DOButton.framework in Embed Frameworks */,
+				E2D32FCF1D5E54FD00AE03F3 /* DOButton.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -48,7 +48,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		E20168F11D5E559200A27348 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		E2CB248E1D5E4974003D8DE3 /* iOS Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2CB24911D5E4974003D8DE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2CB24931D5E4974003D8DE3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +55,7 @@
 		E2CB24981D5E4974003D8DE3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E2CB249D1D5E4974003D8DE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2CB24AA1D5E49C7003D8DE3 /* DOButton.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DOButton.xcodeproj; path = ../../DOButton/DOButton.xcodeproj; sourceTree = "<group>"; };
+		E2D32FCC1D5E547600AE03F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E20168F31D5E55A300A27348 /* DOButton.framework in Frameworks */,
+				E2D32FCE1D5E54FD00AE03F3 /* DOButton.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,7 +93,7 @@
 				E2CB24911D5E4974003D8DE3 /* AppDelegate.swift */,
 				E2CB24931D5E4974003D8DE3 /* ViewController.swift */,
 				E2CB24951D5E4974003D8DE3 /* Main.storyboard */,
-				E20168F01D5E559200A27348 /* LaunchScreen.xib */,
+				E2D32FCB1D5E547600AE03F3 /* LaunchScreen.xib */,
 				E2CB24981D5E4974003D8DE3 /* Assets.xcassets */,
 				E2CB249D1D5E4974003D8DE3 /* Info.plist */,
 			);
@@ -118,12 +118,12 @@
 				E2CB248A1D5E4974003D8DE3 /* Sources */,
 				E2CB248B1D5E4974003D8DE3 /* Frameworks */,
 				E2CB248C1D5E4974003D8DE3 /* Resources */,
-				E20168F71D5E55A300A27348 /* Embed Frameworks */,
+				E2D32FD21D5E54FE00AE03F3 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				E20168F61D5E55A300A27348 /* PBXTargetDependency */,
+				E2D32FD11D5E54FD00AE03F3 /* PBXTargetDependency */,
 			);
 			name = "iOS Example";
 			productName = "iOS Example";
@@ -137,11 +137,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = tbaranes;
 				TargetAttributes = {
 					E2CB248D1D5E4974003D8DE3 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -185,7 +186,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2CB24991D5E4974003D8DE3 /* Assets.xcassets in Resources */,
-				E20168F21D5E559200A27348 /* LaunchScreen.xib in Resources */,
+				E2D32FCD1D5E547600AE03F3 /* LaunchScreen.xib in Resources */,
 				E2CB24971D5E4974003D8DE3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -205,28 +206,28 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		E20168F61D5E55A300A27348 /* PBXTargetDependency */ = {
+		E2D32FD11D5E54FD00AE03F3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = DOButton;
-			targetProxy = E20168F51D5E55A300A27348 /* PBXContainerItemProxy */;
+			targetProxy = E2D32FD01D5E54FD00AE03F3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		E20168F01D5E559200A27348 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E20168F11D5E559200A27348 /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
 		E2CB24951D5E4974003D8DE3 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				E2CB24961D5E4974003D8DE3 /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E2D32FCB1D5E547600AE03F3 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E2D32FCC1D5E547600AE03F3 /* Base */,
+			);
+			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -246,8 +247,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -292,8 +295,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -320,24 +325,27 @@
 		E2CB24A11D5E4974003D8DE3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "iOS Example/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tbaranes.iOS-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		E2CB24A21D5E4974003D8DE3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "iOS Example/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tbaranes.iOS-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
