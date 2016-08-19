@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E27C4AEE1D67920A004FFBA4 /* DOButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C4AED1D67920A004FFBA4 /* DOButton.swift */; };
 		E2CB246C1D5E48F3003D8DE3 /* DOButton.h in Headers */ = {isa = PBXBuildFile; fileRef = E2CB246B1D5E48F3003D8DE3 /* DOButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E2CB24841D5E4928003D8DE3 /* DOButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CB24831D5E4928003D8DE3 /* DOButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E27C4AED1D67920A004FFBA4 /* DOButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DOButton.swift; sourceTree = "<group>"; };
 		E2CB24681D5E48F3003D8DE3 /* DOButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DOButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2CB246B1D5E48F3003D8DE3 /* DOButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DOButton.h; sourceTree = "<group>"; };
 		E2CB246D1D5E48F3003D8DE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E2CB24831D5E4928003D8DE3 /* DOButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DOButton.swift; path = ../../Sources/DOButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,9 +29,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E27C4AEC1D67920A004FFBA4 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				E27C4AED1D67920A004FFBA4 /* DOButton.swift */,
+			);
+			name = Sources;
+			path = ../Sources;
+			sourceTree = "<group>";
+		};
 		E2CB245E1D5E48F3003D8DE3 = {
 			isa = PBXGroup;
 			children = (
+				E27C4AEC1D67920A004FFBA4 /* Sources */,
 				E2CB246A1D5E48F3003D8DE3 /* DOButton */,
 				E2CB24691D5E48F3003D8DE3 /* Products */,
 			);
@@ -48,19 +58,10 @@
 		E2CB246A1D5E48F3003D8DE3 /* DOButton */ = {
 			isa = PBXGroup;
 			children = (
-				E2CB24821D5E491F003D8DE3 /* Classes */,
 				E2CB246B1D5E48F3003D8DE3 /* DOButton.h */,
 				E2CB246D1D5E48F3003D8DE3 /* Info.plist */,
 			);
 			path = DOButton;
-			sourceTree = "<group>";
-		};
-		E2CB24821D5E491F003D8DE3 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				E2CB24831D5E4928003D8DE3 /* DOButton.swift */,
-			);
-			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,6 +86,7 @@
 				E2CB24641D5E48F3003D8DE3 /* Frameworks */,
 				E2CB24651D5E48F3003D8DE3 /* Headers */,
 				E2CB24661D5E48F3003D8DE3 /* Resources */,
+				E27C4AF01D679226004FFBA4 /* Run Script - ⚠️ SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -138,12 +140,29 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		E27C4AF01D679226004FFBA4 /* Run Script - ⚠️ SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script - ⚠️ SwiftLint";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E2CB24631D5E48F3003D8DE3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2CB24841D5E4928003D8DE3 /* DOButton.swift in Sources */,
+				E27C4AEE1D67920A004FFBA4 /* DOButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

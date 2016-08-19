@@ -22,14 +22,14 @@ public class DOButton: UIButton {
     }
     @IBInspectable public var imageColorOn: UIColor! = UIColor(red: 255/255, green: 172/255, blue: 51/255, alpha: 1.0) {
         didSet {
-            if (isSelected) {
+            if isSelected {
                 imageShape.fillColor = imageColorOn.cgColor
             }
         }
     }
     @IBInspectable public var imageColorOff: UIColor! = UIColor(red: 136/255, green: 153/255, blue: 166/255, alpha: 1.0) {
         didSet {
-            if (!isSelected) {
+            if !isSelected {
                 imageShape.fillColor = imageColorOff.cgColor
             }
         }
@@ -70,9 +70,9 @@ public class DOButton: UIButton {
         }
     }
 
-    override open var isSelected : Bool {
+    override open var isSelected: Bool {
         didSet {
-            if (isSelected != oldValue) {
+            if isSelected != oldValue {
                 if isSelected {
                     imageShape.fillColor = imageColorOn.cgColor
                 } else {
@@ -103,12 +103,18 @@ public class DOButton: UIButton {
         addTargets()
     }
 
-    private func createLayers(image: UIImage!) {
+    private func createLayers(image: UIImage) {
         self.layer.sublayers = nil
 
-        let imageFrame = CGRect(x: frame.size.width / 2 - frame.size.width / 4, y: frame.size.height / 2 - frame.size.height / 4, width: frame.size.width / 2, height: frame.size.height / 2)
+        let imageFrame = CGRect(x: frame.size.width / 2 - frame.size.width / 4,
+                                y: frame.size.height / 2 - frame.size.height / 4,
+                                width: frame.size.width / 2,
+                                height: frame.size.height / 2)
         let imgCenterPoint = CGPoint(x: imageFrame.midX, y: imageFrame.midY)
-        let lineFrame = CGRect(x: imageFrame.origin.x - imageFrame.width / 4, y: imageFrame.origin.y - imageFrame.height / 4 , width: imageFrame.width * 1.5, height: imageFrame.height * 1.5)
+        let lineFrame = CGRect(x: imageFrame.origin.x - imageFrame.width / 4,
+                               y: imageFrame.origin.y - imageFrame.height / 4,
+                               width: imageFrame.width * 1.5,
+                               height: imageFrame.height * 1.5)
 
         //===============
         // circle layer
@@ -181,14 +187,14 @@ public class DOButton: UIButton {
         //==============================
         circleTransform.duration = 0.333 // 0.0333 * 10
         circleTransform.values = [
-            NSValue(caTransform3D: CATransform3DMakeScale(0.0,  0.0,  1.0)),    //  0/10
-            NSValue(caTransform3D: CATransform3DMakeScale(0.5,  0.5,  1.0)),    //  1/10
-            NSValue(caTransform3D: CATransform3DMakeScale(1.0,  1.0,  1.0)),    //  2/10
-            NSValue(caTransform3D: CATransform3DMakeScale(1.2,  1.2,  1.0)),    //  3/10
-            NSValue(caTransform3D: CATransform3DMakeScale(1.3,  1.3,  1.0)),    //  4/10
+            NSValue(caTransform3D: CATransform3DMakeScale(0.0, 0.0, 1.0)),    //  0/10
+            NSValue(caTransform3D: CATransform3DMakeScale(0.5, 0.5, 1.0)),    //  1/10
+            NSValue(caTransform3D: CATransform3DMakeScale(1.0, 1.0, 1.0)),    //  2/10
+            NSValue(caTransform3D: CATransform3DMakeScale(1.2, 1.2, 1.0)),    //  3/10
+            NSValue(caTransform3D: CATransform3DMakeScale(1.3, 1.3, 1.0)),    //  4/10
             NSValue(caTransform3D: CATransform3DMakeScale(1.37, 1.37, 1.0)),    //  5/10
-            NSValue(caTransform3D: CATransform3DMakeScale(1.4,  1.4,  1.0)),    //  6/10
-            NSValue(caTransform3D: CATransform3DMakeScale(1.4,  1.4,  1.0))     // 10/10
+            NSValue(caTransform3D: CATransform3DMakeScale(1.4, 1.4, 1.0)),    //  6/10
+            NSValue(caTransform3D: CATransform3DMakeScale(1.4, 1.4, 1.0))     // 10/10
         ]
         circleTransform.keyTimes = [
             0.0,    //  0/10
@@ -205,13 +211,13 @@ public class DOButton: UIButton {
         circleMaskTransform.values = [
             NSValue(caTransform3D: CATransform3DIdentity),                                                              //  0/10
             NSValue(caTransform3D: CATransform3DIdentity),                                                              //  2/10
-            NSValue(caTransform3D: CATransform3DMakeScale(imageFrame.width * 1.25,  imageFrame.height * 1.25,  1.0)),   //  3/10
+            NSValue(caTransform3D: CATransform3DMakeScale(imageFrame.width * 1.25, imageFrame.height * 1.25, 1.0)),   //  3/10
             NSValue(caTransform3D: CATransform3DMakeScale(imageFrame.width * 2.688, imageFrame.height * 2.688, 1.0)),   //  4/10
             NSValue(caTransform3D: CATransform3DMakeScale(imageFrame.width * 3.923, imageFrame.height * 3.923, 1.0)),   //  5/10
             NSValue(caTransform3D: CATransform3DMakeScale(imageFrame.width * 4.375, imageFrame.height * 4.375, 1.0)),   //  6/10
             NSValue(caTransform3D: CATransform3DMakeScale(imageFrame.width * 4.731, imageFrame.height * 4.731, 1.0)),   //  7/10
-            NSValue(caTransform3D: CATransform3DMakeScale(imageFrame.width * 5.0,   imageFrame.height * 5.0,   1.0)),   //  9/10
-            NSValue(caTransform3D: CATransform3DMakeScale(imageFrame.width * 5.0,   imageFrame.height * 5.0,   1.0))    // 10/10
+            NSValue(caTransform3D: CATransform3DMakeScale(imageFrame.width * 5.0, imageFrame.height * 5.0, 1.0)),   //  9/10
+            NSValue(caTransform3D: CATransform3DMakeScale(imageFrame.width * 5.0, imageFrame.height * 5.0, 1.0))    // 10/10
         ]
         circleMaskTransform.keyTimes = [
             0.0,    //  0/10
@@ -295,22 +301,22 @@ public class DOButton: UIButton {
         //==============================
         imageTransform.duration = 1.0 //0.0333 * 30
         imageTransform.values = [
-            NSValue(caTransform3D: CATransform3DMakeScale(0.0,   0.0,   1.0)),  //  0/30
-            NSValue(caTransform3D: CATransform3DMakeScale(0.0,   0.0,   1.0)),  //  3/30
-            NSValue(caTransform3D: CATransform3DMakeScale(1.2,   1.2,   1.0)),  //  9/30
-            NSValue(caTransform3D: CATransform3DMakeScale(1.25,  1.25,  1.0)),  // 10/30
-            NSValue(caTransform3D: CATransform3DMakeScale(1.2,   1.2,   1.0)),  // 11/30
-            NSValue(caTransform3D: CATransform3DMakeScale(0.9,   0.9,   1.0)),  // 14/30
+            NSValue(caTransform3D: CATransform3DMakeScale(0.0, 0.0, 1.0)),  //  0/30
+            NSValue(caTransform3D: CATransform3DMakeScale(0.0, 0.0, 1.0)),  //  3/30
+            NSValue(caTransform3D: CATransform3DMakeScale(1.2, 1.2, 1.0)),  //  9/30
+            NSValue(caTransform3D: CATransform3DMakeScale(1.25, 1.25, 1.0)),  // 10/30
+            NSValue(caTransform3D: CATransform3DMakeScale(1.2, 1.2, 1.0)),  // 11/30
+            NSValue(caTransform3D: CATransform3DMakeScale(0.9, 0.9, 1.0)),  // 14/30
             NSValue(caTransform3D: CATransform3DMakeScale(0.875, 0.875, 1.0)),  // 15/30
             NSValue(caTransform3D: CATransform3DMakeScale(0.875, 0.875, 1.0)),  // 16/30
-            NSValue(caTransform3D: CATransform3DMakeScale(0.9,   0.9,   1.0)),  // 17/30
+            NSValue(caTransform3D: CATransform3DMakeScale(0.9, 0.9, 1.0)),  // 17/30
             NSValue(caTransform3D: CATransform3DMakeScale(1.013, 1.013, 1.0)),  // 20/30
             NSValue(caTransform3D: CATransform3DMakeScale(1.025, 1.025, 1.0)),  // 21/30
             NSValue(caTransform3D: CATransform3DMakeScale(1.013, 1.013, 1.0)),  // 22/30
-            NSValue(caTransform3D: CATransform3DMakeScale(0.96,  0.96,  1.0)),  // 25/30
-            NSValue(caTransform3D: CATransform3DMakeScale(0.95,  0.95,  1.0)),  // 26/30
-            NSValue(caTransform3D: CATransform3DMakeScale(0.96,  0.96,  1.0)),  // 27/30
-            NSValue(caTransform3D: CATransform3DMakeScale(0.99,  0.99,  1.0)),  // 29/30
+            NSValue(caTransform3D: CATransform3DMakeScale(0.96, 0.96, 1.0)),  // 25/30
+            NSValue(caTransform3D: CATransform3DMakeScale(0.95, 0.95, 1.0)),  // 26/30
+            NSValue(caTransform3D: CATransform3DMakeScale(0.96, 0.96, 1.0)),  // 27/30
+            NSValue(caTransform3D: CATransform3DMakeScale(0.99, 0.99, 1.0)),  // 29/30
             NSValue(caTransform3D: CATransform3DIdentity)                       // 30/30
         ]
         imageTransform.keyTimes = [
@@ -394,4 +400,5 @@ public class DOButton: UIButton {
         lines[3].removeAllAnimations()
         lines[4].removeAllAnimations()
     }
+
 }
