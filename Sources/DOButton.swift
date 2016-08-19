@@ -22,14 +22,14 @@ public class DOButton: UIButton {
     }
     @IBInspectable public var imageColorOn: UIColor! = UIColor(red: 255/255, green: 172/255, blue: 51/255, alpha: 1.0) {
         didSet {
-            if isSelected {
+            if (isSelected) {
                 imageShape.fillColor = imageColorOn.cgColor
             }
         }
     }
     @IBInspectable public var imageColorOff: UIColor! = UIColor(red: 136/255, green: 153/255, blue: 166/255, alpha: 1.0) {
         didSet {
-            if !isSelected {
+            if (!isSelected) {
                 imageShape.fillColor = imageColorOff.cgColor
             }
         }
@@ -70,9 +70,9 @@ public class DOButton: UIButton {
         }
     }
 
-    override public var isSelected : Bool {
+    override open var isSelected : Bool {
         didSet {
-            if isSelected != oldValue {
+            if (isSelected != oldValue) {
                 if isSelected {
                     imageShape.fillColor = imageColorOn.cgColor
                 } else {
@@ -146,8 +146,8 @@ public class DOButton: UIButton {
             line.miterLimit = 1.25
             line.path = {
                 let path = CGMutablePath()
-                path.moveTo(nil, x: lineFrame.midX, y: lineFrame.midY)
-                path.addLineTo(nil, x: lineFrame.origin.x + lineFrame.width / 2, y: lineFrame.origin.y)
+                path.move(to: CGPoint(x: lineFrame.midX, y: lineFrame.midY))
+                path.addLine(to: CGPoint(x: lineFrame.origin.x + lineFrame.width / 2, y: lineFrame.origin.y))
                 return path
                 }()
             line.lineCap = kCALineCapRound
@@ -338,26 +338,26 @@ public class DOButton: UIButton {
         //===============
         // add target
         //===============
-        self.addTarget(self, action: #selector(DOButton.touchDown(_:)), for: UIControlEvents.touchDown)
-        self.addTarget(self, action: #selector(DOButton.touchUpInside(_:)), for: UIControlEvents.touchUpInside)
-        self.addTarget(self, action: #selector(DOButton.touchDragExit(_:)), for: UIControlEvents.touchDragExit)
-        self.addTarget(self, action: #selector(DOButton.touchDragEnter(_:)), for: UIControlEvents.touchDragEnter)
-        self.addTarget(self, action: #selector(DOButton.touchCancel(_:)), for: UIControlEvents.touchCancel)
+        self.addTarget(self, action: #selector(touchDown(sender:)), for: UIControlEvents.touchDown)
+        self.addTarget(self, action: #selector(touchUpInside(sender:)), for: UIControlEvents.touchUpInside)
+        self.addTarget(self, action: #selector(touchDragExit(sender:)), for: UIControlEvents.touchDragExit)
+        self.addTarget(self, action: #selector(touchDragEnter(sender:)), for: UIControlEvents.touchDragEnter)
+        self.addTarget(self, action: #selector(touchCancel(sender:)), for: UIControlEvents.touchCancel)
     }
 
-    func touchDown(_ sender: DOButton) {
+    func touchDown(sender: DOButton) {
         self.layer.opacity = 0.4
     }
-    func touchUpInside(_ sender: DOButton) {
+    func touchUpInside(sender: DOButton) {
         self.layer.opacity = 1.0
     }
-    func touchDragExit(_ sender: DOButton) {
+    func touchDragExit(sender: DOButton) {
         self.layer.opacity = 1.0
     }
-    func touchDragEnter(_ sender: DOButton) {
+    func touchDragEnter(sender: DOButton) {
         self.layer.opacity = 0.4
     }
-    func touchCancel(_ sender: DOButton) {
+    func touchCancel(sender: DOButton) {
         self.layer.opacity = 1.0
     }
 
