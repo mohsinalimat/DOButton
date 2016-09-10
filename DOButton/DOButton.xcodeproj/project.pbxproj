@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E27C4AEE1D67920A004FFBA4 /* DOButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C4AED1D67920A004FFBA4 /* DOButton.swift */; };
+		E24058CE1D847979000757CE /* DOButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24058CD1D847979000757CE /* DOButton.swift */; };
 		E2CB246C1D5E48F3003D8DE3 /* DOButton.h in Headers */ = {isa = PBXBuildFile; fileRef = E2CB246B1D5E48F3003D8DE3 /* DOButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E27C4AED1D67920A004FFBA4 /* DOButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DOButton.swift; sourceTree = "<group>"; };
+		E24058CD1D847979000757CE /* DOButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DOButton.swift; sourceTree = "<group>"; };
 		E2CB24681D5E48F3003D8DE3 /* DOButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DOButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2CB246B1D5E48F3003D8DE3 /* DOButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DOButton.h; sourceTree = "<group>"; };
 		E2CB246D1D5E48F3003D8DE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -29,19 +29,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E27C4AEC1D67920A004FFBA4 /* Sources */ = {
+		E24058CC1D847979000757CE /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				E27C4AED1D67920A004FFBA4 /* DOButton.swift */,
+				E24058CD1D847979000757CE /* DOButton.swift */,
 			);
-			name = Sources;
-			path = ../Sources;
+			path = Source;
 			sourceTree = "<group>";
 		};
 		E2CB245E1D5E48F3003D8DE3 = {
 			isa = PBXGroup;
 			children = (
-				E27C4AEC1D67920A004FFBA4 /* Sources */,
+				E24058CC1D847979000757CE /* Source */,
 				E2CB246A1D5E48F3003D8DE3 /* DOButton */,
 				E2CB24691D5E48F3003D8DE3 /* Products */,
 			);
@@ -162,7 +161,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E27C4AEE1D67920A004FFBA4 /* DOButton.swift in Sources */,
+				E24058CE1D847979000757CE /* DOButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
