@@ -1,6 +1,6 @@
 # DOButton
 [![CI Status](https://travis-ci.org/tbaranes/DOButton.svg)](https://travis-ci.org/tbaranes/DOButton)
-![Language](https://img.shields.io/badge/language-Swift%202.2-orange.svg)
+![Language](https://img.shields.io/badge/language-Swift%203.0-orange.svg)
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/DOButton.svg)](https://img.shields.io/cocoapods/v/DOButton.svg)
 [![Platform](https://img.shields.io/cocoapods/p/DOButton.svg?style=flat)](http://cocoadocs.org/docsets/DOButton)
 [![License](https://img.shields.io/cocoapods/l/DOButton.svg?style=flat)](http://cocoapods.org/pods/DOButton)
