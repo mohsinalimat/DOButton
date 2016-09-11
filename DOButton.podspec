@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
 # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
 s.name              = "DOButton"
-s.version           = "1.0.0"
+s.version           = "1.1.0"
 s.summary           = "Cute Animated Button written in Swift. It could be just right for favorite buttons!"
 s.description       = "Cute Animated Button written in Swift. It could be just right for favorite buttons! Maintained clone of https://github.com/okmr-d/DOFavoriteButton"
 s.homepage          = "https://github.com/tbaranes/DOButton"
