@@ -2,6 +2,7 @@
 [![CI Status](https://travis-ci.org/tbaranes/DOButton.svg)](https://travis-ci.org/tbaranes/DOButton)
 ![Language](https://img.shields.io/badge/language-Swift%203.0-orange.svg)
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/DOButton.svg)](https://img.shields.io/cocoapods/v/DOButton.svg)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Platform](https://img.shields.io/cocoapods/p/DOButton.svg?style=flat)](http://cocoadocs.org/docsets/DOButton)
 [![License](https://img.shields.io/cocoapods/l/DOButton.svg?style=flat)](http://cocoapods.org/pods/DOButton)
 
@@ -21,6 +22,11 @@ It could be just right for favorite buttons!
 Add the following line to your `Podfile`:
 ```
 pod 'DOButton'
+```
+#### Carthage
+Add the following line to your `Cartfile`:
+```
+github "tbaranes/DOButton"
 ```
 
 #### Manual
